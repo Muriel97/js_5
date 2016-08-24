@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_正则表达式_建立和方法三</title>
+	<meta charset="utf-8">
+</head>
+<body>
+match:返回匹配到的数组
+默认情况下：对于正则来说，只要匹配成功，就会返回，不会往下执行
+<script type="text/javascript">
+    var str="a2g4435uwhg5iuhkhhbkjfdbhk3hj";
+    var reg=/\d/;
+    console.log( str.match(reg) );    //["2"]
+
+    var reg=new RegExp("\\d","g");    //  \\:\在字符串中需要转义 
+    console.log( str.match(reg) );    //["2", "4", "4", "3", "5", "5", "3"]
+
+    var reg=/\d+/g;
+    console.log( str.match(reg) );     //["2", "4435", "5", "3"]
+</script>
+</body>
+</html>

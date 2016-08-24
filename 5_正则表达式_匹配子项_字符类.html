@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5_正则表达式_匹配子项_字符类</title>
+	<meta charset="utf-8">
+</head>
+<body>
+匹配子项
+<script type="text/javascript">
+    var str="abcde";
+    var reg=/a[bcd]e/;           //a(b|c|d|)e    反向引用      bcd任选一个去匹配
+    console.log( reg.test(str) );      //false
+
+    //排除：^
+    var str="abd";
+    var reg=/a[^be]d/;
+    console.log( reg.test(str) );      //false  有b
+
+    //范围:-   必须从小到大
+    var str="ard";
+    var reg=/a[a-z]d/;
+    console.log( reg.test(str) );              //true
+</script>
+</body>
+</html>

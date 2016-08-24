@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_正则表达式_建立和方法一</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+    //第一种：
+    var reg=/jhf/g;
+    //g:全局    i:不区分大小写   m:多行查找  
+
+    //第二种：         参数   附加值
+    var reg2=new RegExp("\\d","g");  //  \在字符串中需要转移\\ 
+
+    //test:判断字符串中能否匹配到正则，能够则返回true，不能则返回false
+    //\n:换行     \t:空格    \r:制表符   
+    //   \s:空格   \S:非空格   \d:数字   \D:非数字    \w:字符   
+    var str="12369853cxjzhdf";
+    var reg3=/\D/;            //非数字
+    if (reg3.test(str2)) {
+    	alert("不全是数字");      
+    }else{
+    	alert("全是数字");
+    }
+
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2_正则表达式_建立和方法二</title>
+	<meta charset="utf-8">
+</head>
+<body>
+search:返回匹配到的位置
+<script type="text/javascript">
+    var str="fgvfea";
+    var reg=/b/;
+    console.log( str.search(reg) );         //-1:在str中找不到b
+
+    var reg=/fea/;
+    console.log( str.search(reg) );        //3
+
+    var reg=/B/i;           //i:不区分大小写
+    console.log( str.search(reg) );        //-1
+</script>
+</body>
+</html>

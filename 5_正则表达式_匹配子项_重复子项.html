@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5_正则表达式_匹配子项</title>
+	<meta charset="utf-8">
+</head>
+<body>
+匹配子项
+重复子项  \1   第一个子项
+         \2   第二个子项
+<script type="text/javascript">
+    var str="abcde";
+    var reg=/(a)(b)(c)\2/;           //应该是第一子项
+    console.log( reg.test(str) );      //false
+
+</script>
+</body>
+</html>

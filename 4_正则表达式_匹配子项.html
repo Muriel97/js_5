@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4_正则表达式_匹配子项</title>
+	<meta charset="utf-8">
+</head>
+<body>
+    匹配子项
+	<script type="text/javascript">
+	    // var str="2016-5-23";
+	    // var reg=/(\d+)-/g;           
+	    // str.replace( reg,function  ($0) {
+	    // 	alert($0);                  //2016-     5-
+	    // } )
+
+	    // var str="2016-5-23";
+	    // var reg=/(\d-)+/g;                 
+	    // str.replace( reg,function($0,$1) {
+	    // 	document.write( $0+"<br>");                  //6-5-  
+	    // 	document.write( $1+"<br>")                  //5-  
+	    // } )
+
+	    // var str="2016-5-23";
+	    // var reg=/(\d+)(-)/g;                 
+	    // str.replace( reg,function($0,$1,$2) {
+	    // 	document.write( "$0:"+$0+"<br>");                  //2016-   5-  
+	    // 	document.write( "$1:"+$1+"<br>")                  //2016    5  
+	    // 	document.write( "$2:"+$2+"<br>")                  //_       _
+	    // } )
+
+	    // var str="2016-5-23";
+	    // var reg=/(\d+)(-)/g;                 
+	    // str=str.replace( reg,function($0,$1,$2) {
+	    // 	return $1+".";
+	    // } );
+	    // alert( str );        //2016.5.23
+
+        var str="abc";
+	    var reg=/(a)(b)(c)/;       //不能加全局g         
+	    console.log( str.match(reg) );      //["abc", "a", "b", "c", index: 0, input: "abc"]        
+	</script>
+</body>
+</html>

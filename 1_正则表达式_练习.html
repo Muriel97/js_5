@@ -1,0 +1,41 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>1_正则表达式_练习</title>
+       <meta charset="utf-8">
+   </head>
+   <body>
+    <script type="text/javascript">
+        var str="a1b23c4565de2fg";
+        //普通方法：
+        function  findNum(str) {
+            var arr=[];
+            var temp="";
+            for (var i = 0; i < str.length+1; i++) {
+                if(  str.charAt(i)<='9'  &&  str.charAt(i)>='0'  ){     //charAt：取出str字符串中的每个字符
+                    temp+=str.charAt(i);
+                }else{
+                    if (temp) {
+                        arr.push(temp);
+                        temp="";
+                    }
+                }
+            }
+            if (temp) {
+                arr.push(temp);
+                temp="";
+            }
+            return arr;
+        }
+        document.write( findNum(str)+"<br>" );
+
+        //正则表达式：
+        function  findNumByReg(str) {
+            return str.match(/\d+/g);             //   \d:找出是数字的  ＋：至少出现一次，最对无限次
+        }
+        document.write( findNumByReg(str)+"<br>" );
+    
+    
+</script>
+</body>
+</html>
